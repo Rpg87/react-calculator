@@ -1,4 +1,6 @@
-4.30
+5.11
+
+error con el 0
 
 library npm install mathjs
 

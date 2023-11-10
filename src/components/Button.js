@@ -9,11 +9,11 @@ const Button = (props) => {
     };
 
     return (
-        <div
+        <button
             className={`container-btn ${isOperator(props.children) ? ' operator' : ''}`.trimEnd()}
             onClick={() => props.handleInput(props.children)}>
             {props.children}
-        </div >
+        </button >
     )
 };
 
