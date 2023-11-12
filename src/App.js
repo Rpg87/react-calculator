@@ -13,18 +13,22 @@ function App() {
   const [input, setInput] = useState('');
 
   const limitLength = (result) => {
-    // define maximum length
-    const maxLength = 14;
+    // define maximum length and max decimal
+    const maxLength = 16;
     const maxDecimal = 2;
 
-    //convert to a string so I can use length in the next step
+    // if the result is less than 16, the following applies .toLocaleString()
     const resultString = result.toLocaleString();
 
-    // check if length is > 14
-    if (resultString.length > maxLength) {
-      const roundedResult = parseFloat(result).toFixed(maxDecimal);
-      return roundedResult.substring(0, maxLength);
+    // checks if the length is greater than 16, if yes, enter the conditional
 
+    if (resultString.length > maxLength) {
+
+      //convert result to float number (affects even if it has no decimals) and tofixed to apply max 2dec
+
+      const roundedResult = parseFloat(result).toFixed(maxDecimal);
+      // with toLocal i dot the numbers and with substring apply maxlength
+      return roundedResult.toLocaleString().substring(0, maxLength);
 
 
     }
@@ -33,26 +37,47 @@ function App() {
   };
 
   const addInput = (value) => {
-    const newInput = input + value;
-    setInput(newInput);
 
 
-    console.log('Este es el input:', newInput, 'y este es el parámetro:', value);
+
+    // I create a constant that tests if the last character is an operator using $ (end of string) and test(value) that test evaluates if true
+    const lastCharIsOperator = /[+\-*/]$/.test(input);
+
+
+    // if lastCharIsOperator it is an operator and the new value entered is an operator (value)
+    if (lastCharIsOperator && /[+\-*/]/.test(value)) {
+
+      // removes the last position and adds value
+      const newValue = input.slice(0, -1) + value
+      setInput(newValue);
+    } else {
+      const newValue = input + value;
+      setInput(newValue);
+    }
+
+
   };
 
 
 
-  const result = () => {
-    const resultValue = evaluate(input);
 
-    if (!isNaN(resultValue) && isFinite(resultValue)) {
-      // Si la evaluación es un número finito, formatea y actualiza el input
-      const formattedResult = limitLength(resultValue);
-      const numberCommas = formattedResult.toLocaleString();
-      setInput(numberCommas);
-    } else {
-      // Si hay un error en la evaluación, muestra 'Error'
+  const result = () => {
+
+    if (/[+\-*/]$/.test(input)) {
+      // last character is a operator show message
+      alert('Introduce valores validos ejemplo 2+2. Después de aceptar pulsa CLEAR. Gracias');
       setInput('Error');
+    } else {
+      const resultValue = evaluate(input);
+
+      if (!isNaN(resultValue) && isFinite(resultValue)) {
+        //isFinite evaluates if the number is finite, if so, formats and updates input
+        const formattedResult = limitLength(resultValue);
+        setInput(formattedResult);
+      } else {
+
+        setInput('Error');
+      }
     }
   };
 
