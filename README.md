@@ -1,76 +1,80 @@
-5.11
+# React-Calculator by [Raquel](https://www.linkedin.com/in/raquel-pe-go/)
 
-error con el 0
+<h2 id="table-of-contents"> __φ(。。)  Table of Contents</h2>
 
-library npm install mathjs
+<details open="open">
+  <summary>Table of Contents</summary>
 
-# Getting Started with Create React App
+- [About the project](#about-the-project)
+- [Features](#features)
+- [Demo](#demo)
+- [Key Learning Aspects](#key-learning-aspects)
+- [Getting Started](#getting-started)
+- [Library](#library)
+- [Ongoing Improvements](#ongoing-improvements)
+- [Who is Raquel](#who-is-raquel)
+</details>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ٩(⁎❛ᴗ❛⁎)۶ About the project
 
-## Available Scripts
+This repository contains a simple calculator web application built using React, JavaScript and [Mathjs](https://www.npmjs.com/package/mathjs). The application provides basic arithmetic functionality, allowing users to perform addition, subtraction, multiplication, and division operations. It also includes error handling for invalid input.
 
-In the project directory, you can run:
+## (ﾉ ◕ ヮ ◕)ﾉ\*:･ﾟ ✧ Features
 
-### `npm start`
+- **User-Friendly Interface**: The calculator has a clean and intuitive interface, making it easy for users to input and evaluate mathematical expressions.
+- **Arithmetic Operations**: Users can perform standard arithmetic operations, including addition, subtraction, multiplication, and division.
+- **Error Handling**: The application handles errors gracefully, providing informative alerts for scenarios such as incomplete expressions or invalid operations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ૮ ˶ᵔ ᵕ ᵔ˶ ა Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can try the app live [here](https://rpg87.github.io/react-calculator/)
 
-### `npm test`
+<details> <summary>Or you can see an example right here by clicking on the arrow   </summary> 
+<br>
+<p align=center>
+<img src='./src/images/calcugif.gif' width= 400px > </img> </p>
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## (◕‿◕)♡ Key Learning Aspects
 
-### `npm run build`
+- **Conditional Rendering**: Implemented conditional rendering based on user input to handle scenarios like the last character being an operator, ensuring proper expression building.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Error Handling**: Developed a robust error-handling mechanism to handle scenarios where the user attempts to evaluate an incomplete expression or performs an invalid operation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## (　･ω･)☞ Getting started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Clone the repository** to your local machine:
 
-### `npm run eject`
+> <code> git clone https://github.com/Rpg87/react-calculator.git </code>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Change the working directory** to the project's root folder:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> <code>cd calculator-app </code>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Install the required dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> <code> npm install </code>
 
-## Learn More
+**Start the development server:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> <code> npm start </code>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app should now be running on **http://localhost:3000/**.
 
-### Code Splitting
+**If you wish you can download it, you choose**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ପ(๑•ᴗ•๑)ଓ ♡ Ongoing Improvements
 
-### Analyzing the Bundle Size
+- **Feature Expansion**: Exploring opportunities to add additional features or functionalities to the calculator to enhance its capabilities.
+- **Code Optimization**: Identifying and implementing optimizations to enhance the codebase for better performance and maintainability.
+- **Test Implementation**: Planning to incorporate testing strategies to ensure the robustness and reliability of the application.
+- **Error Handling Enhancements**: Resolving issues related to longer and more complex calculations to ensure accurate and reliable results.
+- **Feedback Incorporation**: Actively seeking user feedback and incorporating valuable suggestions to improve the overall application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ฅ(^◕ᴥ◕^)ฅ Who is Raquel
 
-### Making a Progressive Web App
+I am Raquel, I consider myself a person with a great sense of humor, always eager to learn, a lover of challenges and this combination is what led me to study web development.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you want to know more about me or if you have a fun project and you need help we could work together, you can find me [here](https://www.linkedin.com/in/raquel-pe-go/)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
